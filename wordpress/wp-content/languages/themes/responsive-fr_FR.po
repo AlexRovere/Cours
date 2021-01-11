@@ -1,0 +1,445 @@
+# Translation of Themes - Responsive in French (France)
+# This file is distributed under the same license as the Themes - Responsive package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-05-09 07:33:13+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: fr\n"
+"Project-Id-Version: Themes - Responsive\n"
+
+#. Theme Name of the theme
+#: admin/templates/get-started.php:23
+#: core/includes/classes/class-responsive-admin-settings.php:92
+#: core/includes/customizer/settings/class-responsive-customizer-notices.php:77
+msgid "Responsive"
+msgstr "Responsive"
+
+#: core/includes/customizer/settings/class-responsive-blog-layout-customizer.php:216
+#: core/includes/customizer/settings/class-responsive-single-blog-layout-customizer.php:173
+msgid "Categories"
+msgstr "Catégories"
+
+#: partials/single/layout.php:52
+msgid "About"
+msgstr "A propos"
+
+#: sidebar-home.php:40
+msgid "This is your first home widget box. To edit please go to Appearance > Widgets and choose 6th widget from the top in area 6 called Home Widget 1. Title is also manageable from widgets as well."
+msgstr "Ceci est votre premier widget de page d&#39;accueil. Pour le modifier&#44; allez &#224; Apparence > Widgets et choisissez le 6&#232;me widget appel&#233; Accueil Widget 1. Le titre est &#233;galement &#233;ditable via la page d&#39;administration des widgets."
+
+#: sidebar-home.php:68
+msgid "This is your second home widget box. To edit please go to Appearance > Widgets and choose 7th widget from the top in area 7 called Home Widget 2. Title is also manageable from widgets as well."
+msgstr "Ceci est votre second widget de page d&#39;accueil. Pour le modifier&#44; allez &#224; Apparence > Widgets et choisissez le 7&#232;me widget appel&#233; Accueil Widget 2. Le titre est &#233;galement &#233;ditable via la page d&#39;administration des widgets."
+
+#: sidebar-home.php:94
+msgid "This is your third home widget box. To edit please go to Appearance > Widgets and choose 8th widget from the top in area 8 called Home Widget 3. Title is also manageable from widgets as well."
+msgstr "Ceci est votre troisi&#232;me widget de page d&#39;accueil. Pour le modifier&#44; allez &#224; Apparence > Widgets et choisissez le 8&#232;me widget appel&#233; Accueil Widget 3. Le titre est &#233;galement &#233;ditable via la page d&#39;administration des widgets."
+
+#: sidebar-gallery.php:68
+msgid "Camera:"
+msgstr "Appareil:"
+
+#: sidebar-gallery.php:56 sidebar-gallery.php:58 sidebar-gallery.php:61
+msgid "sec"
+msgstr "sec"
+
+#: sidebar-gallery.php:43
+msgid "mm"
+msgstr "mn"
+
+#: sidebar-gallery.php:47
+msgid "ISO:"
+msgstr "Iso:"
+
+#: sidebar-gallery.php:51
+msgid "Shutter:"
+msgstr "Obturateur:"
+
+#: sidebar-gallery.php:38
+msgid "Aperture: f&#47;"
+msgstr "Ouverture : f&#47;"
+
+#: sidebar-gallery.php:43
+msgid "Focal Length:"
+msgstr "Focale:"
+
+#: sidebar-gallery.php:25
+msgid "Image Information"
+msgstr "Information relative &#224; l&#39;image"
+
+#: sidebar-gallery.php:32
+msgid "Full Size:"
+msgstr "Taille réelle:"
+
+#: searchform.php:36
+msgid "Search for:"
+msgstr "Recherche pour:"
+
+#: loop-no-posts.php:43
+msgid "&larr; Home"
+msgstr "&larr; Accueil"
+
+#. translators: %s search term
+#: loop-no-posts.php:26
+msgid "Your search for %s did not match any entries."
+msgstr "Votre recherche pour %s ne retourne aucun contenu."
+
+#. translators: %s search term
+#: loop-no-posts.php:26
+msgid "404 &#8212; Fancy meeting you here!"
+msgstr "404 &#8212; Heureux de vous voir ici &#33;"
+
+#: loop-no-posts.php:32
+msgid "Don&#39;t panic, we&#39;ll get through this together. Let&#39;s explore our options here."
+msgstr "Ne paniquez pas&#44; nous allons r&#233;soudre cela ensemble&#46; Explorons les options possibles ici&#46;"
+
+#. translators: %s: category list
+#. translators: %s posted in categories
+#: core/includes/functions.php:770 image.php:82 partials/single/meta.php:96
+#: partials/entry/meta.php:104
+msgid "Posted in %s"
+msgstr "Publié dans %s"
+
+#: image.php:79 partials/single/layout.php:70 partials/entry/layout.php:64
+msgid "Tagged with:"
+msgstr "Tagu&#233;s avec&nbsp;:"
+
+#: image.php:37
+msgid "&#8249; Return to"
+msgstr "&#8249; Retour &#224;"
+
+#: header.php:36
+msgid "&darr; Skip to Main Content"
+msgstr "&darr; passer au contenu principal"
+
+#: functions.php:594 core/includes/functions.php:94
+msgid "Call to Action"
+msgstr "Appel à l'action"
+
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:39
+#: core/includes/post-custom-meta.php:163
+#: core/includes/customizer/settings/class-responsive-site-layouts-customizer.php:44
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:43
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:39
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:119
+msgid "Layout"
+msgstr "Arrangement"
+
+#: core/includes/functions.php:248 partials/footer/footer-menu.php:10
+#: partials/footer/footer-menu.php:11
+msgid "Footer Menu"
+msgstr "Menu du bas de page"
+
+#: core/includes/functions.php:247
+msgid "Header Menu"
+msgstr "Menu d'en-tête"
+
+#: core/includes/functions-sidebar.php:89
+msgid "Area 10 - sidebar-colophon.php, 100% width Footer widgets"
+msgstr "Zone 10 - sidebar-colophon.php, widget pied de page pleine largeur"
+
+#: core/includes/functions-sidebar.php:76
+msgid "Gallery Sidebar"
+msgstr "Barre lat&#233;rale Galerie"
+
+#: core/includes/functions-sidebar.php:88
+msgid "Colophon Widget"
+msgstr "Widget Colophon"
+
+#: core/includes/functions-sidebar.php:65
+msgid "Area 8 - sidebar-home.php - Displays on the Home Page"
+msgstr "Zone 8 - sidebar-home.php - S'affiche sur la page d'accueil"
+
+#: core/includes/functions-sidebar.php:77
+msgid "Area 9 - sidebar-gallery.php - Displays on the page after an image has been clicked in a Gallery"
+msgstr "Zone 9 - sidebar-gallery.php - S'affiche sur la page lorsqu'une image a été sélectionnée dans la galerie"
+
+#: core/includes/functions-sidebar.php:52
+msgid "Home Widget 2"
+msgstr "Accueil Widget 2"
+
+#: core/includes/functions-sidebar.php:64
+msgid "Home Widget 3"
+msgstr "Accueil Widget 3"
+
+#: core/includes/functions-sidebar.php:41
+msgid "Area 6 - sidebar-home.php - Displays on the Home Page"
+msgstr "Zone 6 - sidebar-home.php - S'affiche sur la page d'accueil"
+
+#: core/includes/functions-sidebar.php:53
+msgid "Area 7 - sidebar-home.php - Displays on the Home Page"
+msgstr "Zone 7 - sidebar-home.php - S'affiche sur la page d'accueil"
+
+#: core/includes/functions-sidebar.php:40
+msgid "Home Widget 1"
+msgstr "Accueil Widget 1"
+
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-single-product-layout-customizer.php:57
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-single-product-layout-customizer.php:62
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:57
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:62
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:52
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:57
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:68
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:73
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:84
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:89
+#: core/includes/page-custom-meta.php:37 core/includes/page-custom-meta.php:43
+msgid "Left Sidebar"
+msgstr "Colonne latérale gauche"
+
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-single-product-layout-customizer.php:56
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-single-product-layout-customizer.php:63
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:56
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:63
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:51
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:58
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:67
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:74
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:83
+#: core/includes/customizer/settings/class-responsive-sidebar-layout-customizer.php:90
+#: core/includes/page-custom-meta.php:36 core/includes/page-custom-meta.php:44
+msgid "Right Sidebar"
+msgstr "Colonne latérale droite"
+
+#: core/includes/functions-sidebar.php:29
+msgid "Area 1 - sidebar.php - Displays on Default, Blog, Blog Excerpt page templates"
+msgstr "Zone 1 - encadré.php - S'affiche sur les gabarits Par défaut, Blogue et Extrait de blogue"
+
+#: core/includes/functions-sidebar.php:28
+msgid "Main Sidebar"
+msgstr "Colonne principale"
+
+#: core/includes/functions-extensions.php:369
+msgid "Yelp!"
+msgstr "A l&apos;Aide !"
+
+#: core/includes/functions-extensions.php:371
+msgid "foursquare"
+msgstr "Foursquare "
+
+#: core/includes/functions-extensions.php:364
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:220
+msgid "YouTube"
+msgstr "YouTube"
+
+#: core/includes/functions-extras.php:205
+msgid "Page %s"
+msgstr "Page %s"
+
+#. translators: %s: view post by
+#. translators: %s view posts by
+#. translators: view all posts by author
+#: core/includes/functions.php:759 partials/single/meta.php:49
+#: partials/entry/meta.php:54
+msgid "View all posts by %s"
+msgstr "Afficher tous les articles par %s"
+
+#. translators: %s is for search query.
+#: loop-header.php:33
+msgid "Search results for: %s"
+msgstr "Résultats de recherche pour %s"
+
+#: loop-no-posts.php:42 core/includes/starter-content.php:35
+msgid "Home"
+msgstr "Accueil"
+
+#: core/includes/customizer/customizer.php:64
+msgid "Custom CSS Styles"
+msgstr "Personnalisation des styles CSS"
+
+#: core/includes/customizer/customizer.php:50
+msgid "CSS Styles"
+msgstr "Styles CSS"
+
+#: core/includes/customizer/settings/class-responsive-header-scripts-customizer.php:39
+#: core/includes/customizer/settings/class-responsive-footer-scripts-customizer.php:39
+msgid "Scripts"
+msgstr "Copie des scripts"
+
+#: core/includes/customizer/settings/class-responsive-header-scripts-customizer.php:54
+msgid "Embeds to header.php"
+msgstr "Intégré dans header.php"
+
+#: core/includes/customizer/settings/class-responsive-footer-scripts-customizer.php:57
+msgid "Embeds to footer.php"
+msgstr "Intégré dans footer.php"
+
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:367
+msgid "Foursquare"
+msgstr "Foursquare "
+
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:346
+msgid "Yelp"
+msgstr "Yelp"
+
+#: core/includes/functions-extensions.php:370
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:325
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: core/includes/functions-extensions.php:365
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:304
+msgid "StumbleUpon"
+msgstr "StumbleUpon "
+
+#: core/includes/functions-extensions.php:368
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:283
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: core/includes/functions-extensions.php:367
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:262
+msgid "Instagram"
+msgstr "Instagram"
+
+#: core/includes/functions-extensions.php:366
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:241
+msgid "RSS Feed"
+msgstr "Flux RSS"
+
+#: core/includes/functions-extensions.php:363
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:199
+msgid "LinkedIn"
+msgstr "Linkedin"
+
+#: core/includes/functions-extensions.php:362
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:178
+msgid "Facebook"
+msgstr "Facebook"
+
+#: core/includes/functions-extensions.php:361
+#: core/includes/customizer/settings/class-responsive-footer-layout-customizer.php:157
+msgid "Twitter"
+msgstr "Twitter"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:280
+msgid "Paste your shortcode, video or image source"
+msgstr "Collez ici votre shortcode, votre html pour l'image ou la video"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:150
+msgid "Content Area"
+msgstr "Zone de contenu"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:276
+msgid "Featured Content"
+msgstr "Contenu mis en avant"
+
+#: functions.php:591 core/includes/functions.php:93
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:142
+msgid "Your title, subtitle and this very content is editable from Theme Option. Call to Action button and its destination link as well. Image on your right can be an image or even YouTube video if you like."
+msgstr "Votre titre, sous&#45;titre et contenu sont modifiables via les options du th&#232;me, ainsi que le bouton Action et son lien. L&#39;image sur votre droite peut &#234;tre une image ou m&#234;me une vid&#233;o YouTube si vous le souhaitez."
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:131
+msgid "Subheadline"
+msgstr "Sous-Titre"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:186
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:379
+msgid "Call to Action (URL)"
+msgstr "Appel &#224; Action (URL)"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:206
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:359
+msgid "Call to Action (Text)"
+msgstr "Appel &#224; Action (Texte)"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:112
+msgid "Headline"
+msgstr "Headline"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:83
+msgid "Enable Custom Front Page"
+msgstr "Activer la page d'accueil personnalisée"
+
+#: core/includes/customizer/settings/class-responsive-home-page-customizer.php:167
+msgid "Disable Call to Action Button?"
+msgstr "Désactiver le bouton Appel à action ?"
+
+#: core/includes/customizer/settings/class-responsive-content-header-layout-customizer.php:56
+msgid "Disable breadcrumb list?"
+msgstr "Désactiver le fil d'Ariane"
+
+#: admin/class-responsive-plugin-install-helper.php:97
+#: admin/class-responsive-plugin-install-helper.php:117
+msgid "Activate"
+msgstr "Activer"
+
+#: core/includes/post-custom-meta.php:138
+msgid "Sidebar/Content"
+msgstr "Barre laterale/Contenu"
+
+#. Template Name of the theme
+#: core/includes/post-custom-meta.php:139
+msgid "Full Width Page (no sidebar)"
+msgstr "Pleine Largeur (sans Barre laterale)"
+
+#: core/includes/post-custom-meta.php:137
+msgid "Content/Sidebar"
+msgstr "Contenu de la barre laterale"
+
+#: core/includes/compatibility/woocommerce/customizer/settings/class-responsive-woocommerce-shop-layout-customizer.php:124
+#: core/includes/post-custom-meta.php:136
+#: core/includes/customizer/settings/class-responsive-page-content-customizer.php:96
+#: core/includes/customizer/settings/class-responsive-blog-layout-customizer.php:141
+#: core/includes/customizer/settings/class-responsive-single-blog-layout-customizer.php:98
+#: core/includes/customizer/settings/class-responsive-typography-customizer.php:427
+#: core/includes/customizer/settings/class-responsive-typography-customizer.php:460
+#: core/includes/customizer/settings/class-responsive-typography-customizer.php:466
+#: core/includes/customizer/settings/class-responsive-typography-customizer.php:540
+#: core/includes/customizer/controls/typography/class-responsive-customizer-typography-control.php:71
+#: core/includes/page-custom-meta.php:35 core/includes/page-custom-meta.php:42
+#: core/includes/page-custom-meta.php:73 core/includes/page-custom-meta.php:102
+msgid "Default"
+msgstr "Valeur par défaut"
+
+#: comments.php:112
+msgid "Website"
+msgstr "Site web"
+
+#: comments.php:110
+msgid "E-mail"
+msgstr "E-mail"
+
+#: comments.php:108
+msgid "Name"
+msgstr "Nom"
+
+#: comments.php:89
+msgid "Pings&#47;Trackbacks"
+msgstr "Pings&#47;Trackback"
+
+#: comments.php:64 comments.php:77
+msgid "Newer comments &#8250;"
+msgstr "récent commentaire  &#8250;"
+
+#: comments.php:62 comments.php:75
+msgid "&#8249; Older comments"
+msgstr "&#8249; commentaire Older"
+
+#: loop-nav.php:29
+msgid "Newer posts &#8250;"
+msgstr "Articles plus r&#233;cents &#8250;"
+
+#: gutenberg-fullwidth.php:46 core/includes/functions-extras.php:133
+#: image.php:59 partials/page/content.php:15
+msgid "Read more &#8250;"
+msgstr "Lire la suite &#8250;"
+
+#: comments.php:31
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Cet article est protégé par un mot de passe. Saisissez le mot de passe pour lire les commentaires."
+
+#: loop-nav.php:28
+msgid "&#8249; Older posts"
+msgstr "&#8249; Articles plus anciens"
+
+#: gutenberg-fullwidth.php:49 image.php:63 partials/single/content.php:38
+#: partials/single/layout.php:61 partials/page/layout.php:45
+#: partials/entry/layout.php:54
+msgid "Pages:"
+msgstr "Pages&nbsp;:"

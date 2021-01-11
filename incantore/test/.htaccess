@@ -1,0 +1,6 @@
+SetEnv PHP_VER 5 
+AuthUserFile /.htpasswd
+AuthGroupFile /dev/null
+AuthName "Accès Restreint"
+AuthType Basic
+require valid-user

@@ -1,0 +1,53 @@
+
+ <!DOCTYPE html>
+<html>
+    <head>
+        <title>Cours jQuery</title>
+        <meta charset="utf-8">
+        <style>
+            .souligne{
+                text-decoration: underline;
+            }
+        </style>
+        
+       
+		  <script src="https://code.jquery.com/jquery-3.5.1.min.js"  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="  crossorigin="anonymous"></script>
+  
+        <script>
+		/*Dès que le document est prêt à être manipulé, on exécute le code
+		à l'intérieur de notre fonction anonyme*/
+		/*$(document).ready(function(){
+			$("p").hide(); 
+		})*/
+		//ou
+		$(function(){
+			//Lors du clic sur le bouton #b1...
+			$("#b1").click(function(){
+			//Si #p3 ne possède pas de class="bleu", on en ajoute une
+				if(!$("#p3").hasClass("bleu")){
+					$("#p3").addClass("bleu");
+				}
+				$(".bleu").css("color", "blue");
+			});
+			
+			//Lors du clic sur le bouton #b2...
+			$("#b2").click(function(){
+				$("div").toggleClass("cacher afficher");
+				//On applique hide() aux éléments qui possèdent une class="cacher"
+				$(".cacher").hide();
+				//On applique show() aux éléments qui possèdent une class="afficher"
+				$(".afficher").show();
+			});
+		})
+		</script>
+    </head>
+    <body>
+       <button id="b1">Changer en bleu</button>
+        <button id="b2">Toggle</button>
+        <div class="afficher">
+            <p>Un premier paragraphe</p>
+            <p>Un deuxième paragraphe</p>
+        </div>
+        <p id="p3">Troisième paragraphe hors div</p>
+    </body>
+</html>

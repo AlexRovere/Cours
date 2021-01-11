@@ -1,0 +1,213 @@
+/* Main */
+*
+{
+	box-sizing: border-box;
+}
+
+#bloc_page
+{
+	width: 70%;
+	margin: auto;
+}
+
+body
+{
+	background-color: #c7e1f8;
+	font-family: georgia, no-seriff;
+}
+
+h1
+{
+	text-align: center;
+	text-decoration: underline;
+}
+
+h2
+{
+	text-align: center;
+	text-decoration: underline;
+}
+a
+{
+	text-decoration: none;
+}
+
+/*Header*/
+
+#menu_header
+{
+	
+	display: flex;
+	justify-content: space-around;
+	border : 2px black outset;
+	border-radius: 10px;
+	text-decoration: none;
+	list-style-type: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 2em;
+	font-weight: bold;
+	background-color: brown;
+	text-shadow: 1px 2px 3px black;
+	box-shadow: 5px 2px 2px black;
+
+}
+
+#titre_principal
+{
+	font-size: 3em;
+	color: brown;
+	text-decoration: underline;
+}
+
+#banner
+{
+	text-align: center;
+	background-image: url(images/header.png);
+	background-repeat: no-repeat;
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+}
+
+
+/* Contenu */
+
+.article
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	text-align: center;
+}
+
+.article_photo
+{
+	width: 300px;
+	height: 300px;
+}
+
+.bouton
+{
+	background-color: brown;
+	padding : 10px 10px 10px 10px;
+	color: white;
+	font-weight: bold;
+}
+
+article
+{
+	margin: auto;
+	text-align: center;
+}
+
+.separation
+{
+	display: flex;
+}
+
+#moi
+{
+	border: 5px black outset ;
+	width: 40%;
+	background-image: url(images/trek.jpeg);
+	background-repeat: no-repeat;
+	margin-bottom: 50px;
+}
+
+/*Fiche article*/
+
+.image_float
+{
+	float: left;
+	width: 300px;
+	height: 300px;
+	margin-right: 50px;
+}
+
+.auteur
+{
+	text-align: right;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.contenu
+{
+	text-align: justify;
+	font-size: 20px;
+}
+
+/*Produits */
+
+.image_produit
+{
+	width: 300px;
+	height: 300px;
+}
+
+.panier
+{
+	background-color: orange;
+	width: 100px;
+	height: 50px;
+	font-weight: bold;
+}
+
+.quantity
+{
+	background-color: orange;
+	width: 50px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+/*Panier*/
+
+td
+{
+	border: 5px solid black;
+	border-collapse: collapse;
+}
+
+/*FOOTER */ 
+
+
+footer
+{
+	background-color: #2a0205;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+#separation_footer
+{
+	display: flex;
+	justify-content: space-around;
+	color: #c7e1f8;
+}
+
+/* Contact */
+
+textarea
+{
+	width: 700px;
+	height: 200px;
+}
+
+form
+{
+	text-align: center;
+}
+
+/*Contact */
+
+.bouton_envoyer
+{
+	height: 50px;
+	width: 150px;
+	border: 3px black double;
+	background-color : orange;
+	font-size: medium;
+	font-weight: bold;
+}

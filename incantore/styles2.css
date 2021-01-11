@@ -1,0 +1,454 @@
+/* Général */
+body
+{
+	margin: 0px;
+	margin-top: 0px;
+	background-image: url(images/bois.jpg);
+	background-attachment: fixed;
+	font-family: georgia, sans-serif;
+}
+
+header
+{
+	position: fixed;
+	width: 100%;
+	z-index: 1000;
+
+}
+h1
+{
+	color: brown;
+	font-size: 3em;
+	text-align: center;
+	text-decoration: underline;
+	padding-top: 1%;
+}
+
+#titre_principal
+
+{
+	font-size: 4em;
+	
+
+}
+
+h1 a
+{
+	color: brown;
+	font-weight: bold;
+	text-decoration: underline overline;
+	
+}
+
+h1 em 
+{
+	font-size: 0.6em;
+}
+
+ h2
+ {
+ 	color: #b8e994;
+ 	font-size: 2em;
+ 	text-decoration: underline;
+ 	text-align: center;
+ }
+
+ h2 a
+ {
+ 	color: maroon;
+ 	text-decoration: underline;
+ 	text-align: center;
+ }
+
+
+h3
+{
+	color: brown;
+ 	font-size: 1,5em;
+	text-align: center;
+ 	text-decoration: underline;
+}
+
+h4
+{
+	color:#3a2406;
+	font-size: 1em;
+	text-align: center;
+	font-style: italic;
+	text-decoration: underline;
+}
+a 
+{
+	text-decoration: none;
+	color: black;
+}
+
+
+a:hover 
+{
+	color: #37c0fb;
+	border-bottom-color: transparent;}
+
+p
+{
+	font-size: 1.5em;
+}
+
+footer 
+{
+
+	font-size: 1.2em;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 10%;
+	margin-right: 10%;
+}	
+
+h3 a
+{
+	color: brown;
+}
+
+
+/* Template */
+
+#banner
+{
+	text-align: center;
+	background-image: url(images/banner.jpg);
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+#nav_ul
+
+{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: auto;
+	border: 5px black solid;
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 2em;
+
+}
+		
+#logo
+{
+	width: 60%;
+	height: 300px;
+  	display:block;
+	clear:both;
+	margin-left:auto;
+	margin-right:auto;  
+	margin-top: 30px; 
+}
+/* Page principal section 1 */
+
+#partie1
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+
+#presentation
+{ 
+	 width: 30%;
+}
+
+#sources
+{
+	width: 30%;
+}
+
+#pub1
+{
+	margin-top: 30%;
+}
+
+#article_ul
+{ 
+	font-weight: bold;
+	font-size: x-large;
+	margin-left: 20%;
+}
+
+/* Page principal section 2*/
+
+#partie2
+{
+	display: flex;
+}	
+	
+.partie2
+{
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 50px;
+		
+}
+
+#creme_visolea
+{
+	width: 200px;
+}
+
+#bordure
+{
+	background-image: url(images/header_fond.png);
+	background-clip : content-box;
+	background-color: rgba(255, 0, 0, 0);
+	padding-top: 250px;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+#footer_text
+{
+	font-size: 0.9em;
+}
+
+#footer_banner
+{
+	background-image: url(images/bois.jpg);
+	background-repeat: repeat;
+}
+
+/* Autres pages */
+
+#qui_sommes_nous
+{
+	text-align: justify;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+}
+
+#ethique
+{
+	text-align: justify;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+}
+
+#mention
+
+{
+	text-align: justify;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#produits
+
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.panier
+
+{
+	display: block;
+	margin-left: 40%;
+	margin-right: 40%;
+	background-color: orange;
+	width: 100px;
+	height: 40px;
+	font-weight: bold;
+	border-radius: 30px;
+}
+
+#creme_cicolea2
+
+{
+	width: 40%;
+	height: 20%;	
+}
+
+#creme_visolea2
+
+{
+	width: 40%;
+	height: 20%;
+
+}
+
+#sources_ul
+
+{
+	text-align: justify;
+	margin-left: 300px;
+	margin-right: 300px;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+#message
+
+{
+	width: 700px;
+	height:300px;
+}
+
+#contact
+
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 1,5em;
+}
+
+.bouton_envoyer
+
+{
+	margin-bottom: 5%;
+	background-color: brown;
+	width: 100px;
+	height: 40px;
+	font-weight: bold;
+	border-radius: 30px;
+}
+
+.photo_source
+
+{
+
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+
+}	
+
+
+
+#liste_source
+
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center ;
+	justify-content: center;
+	text-align: center;
+}
+
+#sources_marge
+
+{
+	width: 50%;
+}
+
+.p_center
+
+{
+	text-align: justify;
+}
+
+.div_marge
+
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/*Page Avis */
+
+#avis
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}	
+
+#liste_avis
+{
+	display: flex;
+	justify-content: space-around;
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+#message_avis
+{
+	border: 2px brown solid;
+	margin-bottom: 100px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+/*Page fiche_produit */
+
+#fiche_produit
+
+{
+	margin-left: 5%;
+	margin-right: 5%;
+	display: flex;  
+	justify-content: space-around;
+}
+
+#fiche_source_ul
+
+{
+	font-size: 2em;
+	margin : auto;
+}
+
+/*Page actu */
+
+#liste_actu
+
+{
+
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 2em;
+	text-align: center;
+}
+
+#photo_actu
+
+{
+	display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+/*Page point de vente */
+
+#pharmacie
+
+{
+	display: flex;
+	justify-content: space-around;
+	font-size: 1,7em;
+
+}
+
+#liste_pharmacie
+
+{
+	border: 1px black solid;
+	padding: 2%;
+}	
+
+/*Jquery */
+  
+#nav_ul li a
+
+{
+	width: 100%;
+	text-align: center;
+}
