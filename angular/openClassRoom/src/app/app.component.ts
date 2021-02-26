@@ -1,21 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/Observable/interval';
+import { Subscription } from 'rxjs/Subscription';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = "amazing";
-  isAuth = false;
-  constructor() {
-    setTimeout(
+export class AppComponent implements OnInit, OnDestroy {
+
+  secondes: number;
+  counterSubscription: Subscription;
+
+  constructor() {}
+
+  ngOnInit() {
+    const counter = Observable.interval(1000);
+    this.counterSubscription= counter.subscribe(
+      (value) => {
+        this.secondes = value;
+      },
+      (error) => {
+        console.log('Une erreur a été rencontrée !' + error)
+      },
       () => {
-        this.isAuth = true;
-      }, 4000
+        console.log('Observable complété !')
+      }
     );
   }
-  onAllumer() {
-    console.log('On allume tout !')
+
+  ngOnDestroy() {
+    this.counterSubscription.unsubscribe();
   }
 }
