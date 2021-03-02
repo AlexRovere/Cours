@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PapaComponent implements OnInit {
 
-  appareils = [
+  appareils = [       
     {
       name:"ps5",
       prix: 200
@@ -22,7 +22,10 @@ export class PapaComponent implements OnInit {
     }
   ]
 
-  constructor() { }
+  constructor() { 
+    console.log(this.appareils)
+  }
+
 
   ngOnInit(): void {
   }
