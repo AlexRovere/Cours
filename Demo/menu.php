@@ -21,7 +21,7 @@ if (!function_exists('activeOnglet')) {
 
 }
 ?>
-<?= activeOnglet("/demo/index.php", "Accueil");?>
-<?= activeOnglet("/demo/contact.php", "Contact");?>
-<?= activeOnglet("/demo/nombre.php", "Nombre");?>
-<?= activeOnglet("/demo/checkbox.php", "Checkbox");?>
+<?= activeOnglet("/projets/demo/index.php", "Accueil");?>
+<?= activeOnglet("/projets/demo/contact.php", "Contact");?>
+<?= activeOnglet("/projets/demo/nombre.php", "Nombre");?>
+<?= activeOnglet("/projets/demo/checkbox.php", "Checkbox");?>
