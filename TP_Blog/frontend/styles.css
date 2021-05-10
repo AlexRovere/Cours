@@ -1,7 +1,7 @@
 .wrapper 
 {
-   margin-left: 20%;
-   margin-right: 20%;
+   margin-left: 10%;
+   margin-right: 10%;
 }
 
 .align
@@ -25,11 +25,17 @@
     color: black;
 }
 
+.modifier
+{
+    background-color: orange;
+    color: black;
+}
+
 .tableau 
 {
     border: 5px solid black;
     margin: auto;
-    width: 60%;
+    width: 80%;
 }
 
 table
@@ -66,4 +72,39 @@ a
     display: flex;
     background-color: greenyellow;
     margin: auto;
+}
+
+tr 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+}
+
+textarea
+{
+    width: 500px;
+    height: 400px;
+    resize: none;
+}
+
+.checkbox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+label
+{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+button
+{
+    width: 150px;
+    height: 40px;
+    font-weight: bold;
+    color: brown;
 }

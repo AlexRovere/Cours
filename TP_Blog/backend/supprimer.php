@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$bdd = 'concerts';
+$bdd = 'tp_blog';
 $user = 'root';
 $password = '';
 $id = htmlspecialchars($_GET['id']);
@@ -16,9 +16,11 @@ catch(Exception $e)
 
 if(isset($id))
 {
-$req = $bdd->prepare('DELETE FROM concert WHERE id_concert = :id');
+$req = $bdd->prepare('DELETE FROM article WHERE id_article = :id');
 $req->execute(['id' => $id]);
 }
+
+    // Les tags sont supprimés automatiquement grace à la constrain cascade DELETE dans phpmyadmin
 
 header('Location: ../frontend/index.php');
 

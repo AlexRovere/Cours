@@ -15,7 +15,7 @@ require "../backend/connexion.php";
 <div class="wrapper">
         <div class="align">
             <h1>Liste d'articles</h1>
-            <a href="formCreation.php" class="ajouter">Créer</a>
+            <a href="creationArticle.php" class="ajouter">Créer</a>
         </div>
         <div class="tableau">
         <table>
@@ -26,6 +26,8 @@ require "../backend/connexion.php";
                 <th>Statut</th>
                 <th>Catégorie</th>
                 <th>Tags</th>
+                <th>Modifier</th>
+                <th>Supprimer</th>
             </tr>
         </thead>
         <tbody>
@@ -33,11 +35,13 @@ require "../backend/connexion.php";
             {
                 ?>
                 <tr>
-                    <td><?=$data['date']?></td>
-                    <td><?=$data['lieu']?></td>
-                    <td><?=$data['groupe']?></td>
-                    <td><?=$data['note']?></td>
-                    <td><a href="../backend/supprimer.php?id=<?= $data['id_concert']?>" class="supprimer">Supprimer</a></td>
+                    <td><?=$data['titre_article']?></td>
+                    <td><?=$data['date_creation']?></td>
+                    <td><?=$data['statut_article']?></td>
+                    <td><?=$data['nom_categorie']?></td>
+                    <td><?=$data['nom_tag']?></td>
+                    <td><a href="modifierArticle.php?id=<?= $data['id_article']?>" class="modifier">Modifier</a></td>
+                    <td><a href="../backend/supprimer.php?id=<?= $data['id_article']?>" class="supprimer">Supprimer</a></td>
                 </tr>
             <?php 
             }
