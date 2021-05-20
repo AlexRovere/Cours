@@ -1,0 +1,9 @@
+<div class="card d-flex" style= width:300px; *ngIf="produit != null">
+    <img src="{{produit.photo_produit}}" class="card-img-top" >
+    <div class="card-body">
+        <h3 class="card-title">{{produit.titre_produit}}</h3>
+        <p class="card-text">{{produit.description_produit}}</p>
+        <p class="card-text">Prix : {{produit.prix_produit}}</p>
+        <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+    </div>
+</div>

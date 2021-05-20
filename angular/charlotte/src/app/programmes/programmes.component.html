@@ -1,3 +1,10 @@
 <p>programmes works!</p>
-<div class="gumroad-product-embed"><a href="https://gumroad.com/l/FaKgr">Chargement...</a></div>
 
+<div id="paypal"></div>
+
+<div *ngIf="produits != null">
+    <h1>{{produits[0].titre_produit}}</h1>
+    <p>{{produits[0].description_produit}}</p>
+    <label>Prix : {{produits[0].prix_produit}}</label>
+    <button (click)="buttonPDF()">Téléchargement pdf</button>
+</div>

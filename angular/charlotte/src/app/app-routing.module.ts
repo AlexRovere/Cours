@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
+import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
+import { ProduitComponent } from './liste-produits/produit/produit.component';
 import { ProgrammesComponent } from './programmes/programmes.component';
 
 const routes: Routes = [
@@ -12,6 +14,14 @@ const routes: Routes = [
   {
     path: "programmes",
     component: ProgrammesComponent
+  },
+  {
+    path: "liste-produits",
+    component: ListeProduitsComponent
+  },
+  {
+    path: "liste-produits/produit/:id",
+    component: ProduitComponent
   },
   {
     path: "not-found",

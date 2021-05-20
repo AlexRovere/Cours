@@ -1,4 +1,9 @@
-import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { render } from 'creditcardpayments/creditCardPayments';
+import { EmailService } from '../service/email.service';
+import { ProduitService } from '../service/produit.service';
+
 
 @Component({
   selector: 'app-programmes',
@@ -7,34 +12,51 @@ import { AfterContentInit, Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class ProgrammesComponent implements OnInit {
 
-  readonly scriptNode: HTMLScriptElement;
-  constructor() {} 
-    
+produits = null;
 
+
+  constructor(private produitService: ProduitService, private router: Router, private emailService : EmailService) {
+  } 
+    
   ngOnInit(): void {
-    
+    this.serviceAllProducts();
   }
 
-
-  testApi()
-  {
-    fetch("https://gumroadzakutynskyv1.p.rapidapi.com/getSingleProduct", {
-    "method": "POST",
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded",
-        "x-rapidapi-key": "SIGN-UP-FOR-KEY",
-        "x-rapidapi-host": "GumroadzakutynskyV1.p.rapidapi.com"
-    },
-    "body": {
-        "id": "ec2f25022cbef19be45134f35543f50a909a76af70f3d079b80de0c09f90b1d0",
-        "accessToken": "6b6c9b8d13a6a2a5255918452855c56a44257f2bc1031943c0c69ef45732e781"
-    }
-})
-.then(response => {
-    console.log(response);
-})
-.catch(err => {
-    console.error(err);
-});
+  serviceAllProducts(){
+    this.produitService.getAllProducts().subscribe(
+      (response:any) => {
+        if (response['success']) {
+          this.produits = response['produit'];
+          this.paypal(this.produits[0].prix_produit);
+        } 
+        else {
+          console.log(response['error'])
+        }
+      },
+      (error) => console.log(error)
+    );
   }
+
+  paypal(prix) {
+
+    render(
+      {
+        id:"#paypal",
+        currency: "EUR",
+        value: prix,
+        onApprove: (details) => {
+          this.produitService.downloadPdf(this.produits[0].lien_produit, this.produits[0].titre_produit)
+          this.emailService.sendEmail(details.payer.email_address, this.produits[0].lien_produit)
+
+        }
+      }
+    );
+  }
+
+  buttonPDF(){
+    this.produitService.downloadPdf(this.produits[0].lien_produit, this.produits[0].titre_produit)
+  }
+
+  
+
 }

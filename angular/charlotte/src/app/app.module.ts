@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { ProgrammesComponent } from './programmes/programmes.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
+import { ProduitComponent } from './liste-produits/produit/produit.component';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 @NgModule({
   declarations: [
@@ -17,11 +21,15 @@ import { ProgrammesComponent } from './programmes/programmes.component';
     HomeComponent,
     NotFoundComponent,
     FourOhFourComponent,
-    ProgrammesComponent
+    ProgrammesComponent,
+    ListeProduitsComponent,
+    ProduitComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgxPayPalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

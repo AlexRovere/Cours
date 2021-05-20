@@ -1,0 +1,13 @@
+<div class="d-flex">
+    <ng-template ngFor let-item [ngForOf]="produits" let-i="index" *ngIf="produits != null">
+        <div class="card" style=width:300px;>
+            <img src="{{produits[i].photo_produit}}" class="card-img-top">
+            <div class="card-body">
+                <h3 class="card-title">{{produits[i].titre_produit}}</h3>
+                <p class="card-text">{{produits[i].description_produit}}</p>
+                <p class="card-text">Prix : {{produits[i].prix_produit}}</p>
+                <a routerLink="produit/{{produits[i].id_produit}}">Voir le produit</a>
+            </div>
+        </div>
+    </ng-template>
+</div>
