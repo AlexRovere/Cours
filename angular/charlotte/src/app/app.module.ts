@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
 import { ProduitComponent } from './liste-produits/produit/produit.component';
 import { NgxPayPalModule } from 'ngx-paypal';
+import { PostListComponent } from './post-list/post-list.component';
+import { DetailArticleComponent } from './post-list/detail-article/detail-article.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
     ProgrammesComponent,
     ListeProduitsComponent,
     ProduitComponent,
+    PostListComponent,
+    DetailArticleComponent,
   ],
   imports: [
     BrowserModule,
