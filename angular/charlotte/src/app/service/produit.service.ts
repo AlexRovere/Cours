@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 
@@ -10,11 +10,17 @@ const FileSaver = require('file-saver');
 })
 export class ProduitService {
 
+  optionRequete = {
+    headers: new HttpHeaders({ 
+      'Access-Control-Allow-Origin':'*'
+    })
+  };
+
 
   constructor(private http: HttpClient) { }
 
   getAllProducts() {
-    return this.http.get('http://localhost/projets/angular/charlotte/src/back-end/listeProduits.php');
+    return this.http.get('http://localhost/projets/angular/charlotte/src/back-end/listeProduits.php', this.optionRequete);
   }
 
   getSingleProduct(id) {
