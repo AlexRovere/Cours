@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProduitsController!{% endblock %}
+
+{% block body %}
+
+    {% for produit in produits %}
+        <a href="{{ path('stripe', {'id': produit.id})}}">CLIQUE LA</a>
+    {% endfor %}
+{% endblock %}
