@@ -44,8 +44,6 @@ class DefaultController extends AbstractController
     public function checkout()
     {
         \Stripe\Stripe::setApiKey('sk_test_51Ixpg5DmFmsRyV8Bf1PBIxvEY1OtPxy2iMIkYdiH2S3YvzgpTzsp5txj1dqYHE8vZTP3vs747xDYzdCqhBdRiAF200B7FMhQTH');
-        $token = \random_int(10, 1000);
-        // \var_dump($token);
         $session = \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
             'line_items' => [[
@@ -59,7 +57,7 @@ class DefaultController extends AbstractController
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => $this->generateUrl('success', ['token' => $token], UrlGeneratorInterface::ABSOLUTE_URL),
+            'success_url' => $this->generateUrl('success', [], UrlGeneratorInterface::ABSOLUTE_URL),
             'cancel_url' => $this->generateUrl('error', [], UrlGeneratorInterface::ABSOLUTE_URL),
         ]);
 
