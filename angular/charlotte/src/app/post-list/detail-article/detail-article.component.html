@@ -1,4 +1,23 @@
+<h1>Récupération des données via mon api platform sous symfony</h1>
+
 <div *ngIf="article != null" class="card">
-    <div class="title">{{id}}</div>
-    <div class="content">{{article.title}}</div>
+  <div class="container">
+    <div class="row row-cols-2">
+      <div class="card col">
+        <ul>
+          <li>id : {{ article.id }}</li>
+          <li>titre : {{ article.title }}</li>
+          <li>contenu : {{ article.content }}</li>
+          <li>date de création : {{ article.createdAt }}</li>
+          <li>date modification {{ article.updatedAt }}</li>
+        </ul>
+        <a
+          routerLink="detail-article/{{ article.id }}"
+          type="button"
+          class="btn btn-success"
+          >Lire</a
+        >
+      </div>
+    </div>
+  </div>
 </div>
