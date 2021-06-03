@@ -2,8 +2,8 @@
 
 namespace App\Controller;
 
-use ProductManager;
 use App\Entity\Product;
+use App\Manager\ProductManager;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +16,7 @@ class StripeController extends AbstractController
      */
     public function payment(Product $product, ProductManager $productManager): Response
     {
-        return $this->render('index.html.twig', [
+        return $this->render('stripe/index.html.twig', [
             'user' => $this->getUser(),
             'intentSecret' => $productManager->intentSecret($product),
             'product' => $product
