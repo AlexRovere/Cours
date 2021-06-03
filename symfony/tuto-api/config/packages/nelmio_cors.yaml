@@ -1,6 +1,7 @@
 nelmio_cors:
     defaults:
         origin_regex: true
+<<<<<<< HEAD
         allow_origin: ['*']
         allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
         allow_headers: ['*']
@@ -13,3 +14,12 @@ nelmio_cors:
         # allow_headers: ['*']
         # expose_headers: ["Link"]
         # max_age: 3600
+=======
+        allow_origin: ['%env(CORS_ALLOW_ORIGIN)%']
+        allow_methods: ['GET', 'OPTIONS', 'POST', 'PUT', 'PATCH', 'DELETE']
+        allow_headers: ['Content-Type', 'Authorization']
+        expose_headers: ['Link']
+        max_age: 3600
+    paths:
+        '^/': null
+>>>>>>> parent of 7969cfdf (tuto-stripe)
