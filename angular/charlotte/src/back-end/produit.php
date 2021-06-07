@@ -13,24 +13,22 @@ if (isset($postdata) && !empty($postdata)) {
     $data = json_decode($postdata, true);
     $id = $data['id'];
 
-try {
-    $bdd = new PDO('mysql:host=localhost; dbname=charlotte;charset=UTF8', 'root', ''); // BDD EN LIGNE
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $req = $bdd->prepare('SELECT id_produit, titre_produit, description_produit, prix_produit, photo_produit FROM produit WHERE id_produit= :id');
-    $req->bindParam(':id', $id);
-    $req->execute();
-    $data = $req->fetch();
-    echo json_encode([
-        'success' => true,
-        'produit' => $data
+    try {
+        $bdd = new PDO('mysql:host=localhost; dbname=angular-stripe;charset=UTF8', 'root', ''); // BDD EN LIGNE
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $req = $bdd->prepare('SELECT * FROM produit WHERE id= :id');
+        $req->bindParam(':id', $id);
+        $req->execute();
+        $data = $req->fetch();
+        echo json_encode([
+            'success' => true,
+            'produit' => $data
         ]);
-} catch (Exception $e) {
-    echo json_encode([
-        'success' => false,
-        'error' => $e
+    } catch (Exception $e) {
+        echo json_encode([
+            'success' => false,
+            'error' => $e
         ]);
-    die('Erreur : ' . $e->getMessage());
+        die('Erreur : ' . $e->getMessage());
+    }
 }
-}
-
- ?>
