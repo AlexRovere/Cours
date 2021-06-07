@@ -7,45 +7,50 @@ import { ProduitComponent } from './liste-produits/produit/produit.component';
 import { DetailArticleComponent } from './post-list/detail-article/detail-article.component';
 import { PostListComponent } from './post-list/post-list.component';
 import { ProgrammesComponent } from './programmes/programmes.component';
+import { StripeComponent } from './stripe/stripe.component';
 
 const routes: Routes = [
   {
-    path: "home",
-    component: HomeComponent
+    path: 'home',
+    component: HomeComponent,
   },
   {
-    path: "programmes",
-    component: ProgrammesComponent
+    path: 'programmes',
+    component: ProgrammesComponent,
   },
   {
-  path: "articles",
-  component: PostListComponent
+    path: 'articles',
+    component: PostListComponent,
   },
   {
-    path: "articles/detail-article/:id",
-    component: DetailArticleComponent
-    },
+    path: 'articles/detail-article/:id',
+    component: DetailArticleComponent,
+  },
   {
-    path: "liste-produits",
-    component: ListeProduitsComponent
+    path: 'stripe',
+    component: StripeComponent,
+  },
+  {
+    path: 'liste-produits',
+    component: ListeProduitsComponent,
   },
 
   {
-    path: "liste-produits/produit/:id",
-    component: ProduitComponent
+    path: 'liste-produits/produit/:id',
+    component: ProduitComponent,
   },
   {
-    path: "not-found",
+    path: 'not-found',
     component: FourOhFourComponent,
   },
   {
-    path: "",
-    component: HomeComponent
+    path: '',
+    component: HomeComponent,
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
