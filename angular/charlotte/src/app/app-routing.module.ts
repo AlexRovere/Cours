@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CancelComponent } from './cancel/cancel.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { HomeComponent } from './home/home.component';
 import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
@@ -8,6 +9,7 @@ import { DetailArticleComponent } from './post-list/detail-article/detail-articl
 import { PostListComponent } from './post-list/post-list.component';
 import { ProgrammesComponent } from './programmes/programmes.component';
 import { StripeComponent } from './stripe/stripe.component';
+import { SuccessComponent } from './success/success.component';
 
 const routes: Routes = [
   {
@@ -38,6 +40,14 @@ const routes: Routes = [
   {
     path: 'liste-produits/produit/:id',
     component: ProduitComponent,
+  },
+  {
+    path: 'success/:session_id',
+    component: SuccessComponent,
+  },
+  {
+    path: 'cancel',
+    component: CancelComponent,
   },
   {
     path: 'not-found',

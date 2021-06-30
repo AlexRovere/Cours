@@ -15,6 +15,8 @@ import { NgxPayPalModule } from 'ngx-paypal';
 import { PostListComponent } from './post-list/post-list.component';
 import { DetailArticleComponent } from './post-list/detail-article/detail-article.component';
 import { StripeComponent } from './stripe/stripe.component';
+import { SuccessComponent } from './success/success.component';
+import { CancelComponent } from './cancel/cancel.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { StripeComponent } from './stripe/stripe.component';
     PostListComponent,
     DetailArticleComponent,
     StripeComponent,
+    SuccessComponent,
+    CancelComponent,
   ],
   imports: [
     BrowserModule,

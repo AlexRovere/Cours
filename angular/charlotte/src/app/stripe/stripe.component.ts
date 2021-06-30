@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var Stripe: any;
 @Component({
   selector: 'app-stripe',
   templateUrl: './stripe.component.html',
@@ -10,8 +10,9 @@ export class StripeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  stripe() {
-    var stripe = stripe(
+  fetch(id) {
+    var sessionId;
+    var stripe = new Stripe(
       'pk_test_51Ixpg5DmFmsRyV8BtHyBkox7eJ4zuzznNcTWAMdQ2swNMA0bMUfU9aBDmd3A3oQHdolRqF4NDhiT5uo0z3hUmWS600HSp6ohI9'
     );
     // var checkoutButton = document.getElementById('checkout-button');
@@ -19,13 +20,19 @@ export class StripeComponent implements OnInit {
     // checkoutButton.addEventListener('click', function () {
     // Create a new Checkout Session using the server-side endpoint you
     // created in step 3.
-    fetch('/create-checkout-session', { method: 'POST' })
-      .then(function (response) {
-        return response.json();
+    fetch('https://127.0.0.1:8000/create-session', {
+      method: 'POST',
+      headers: {
+        'content-Type': 'application/json',
+      },
+      body: JSON.stringify({ id: id }),
+    })
+      .then(function (r) {
+        return r.json();
       })
-      .then(function (session) {
-        return stripe.redirectToCheckout({ sessionId: session.id });
-        console.log(session);
+      .then(function (response) {
+        sessionId = response.id;
+        return stripe.redirectToCheckout({ sessionId: sessionId });
       })
       .then(function (result) {
         // If `redirectToCheckout` fails due to a browser or network
