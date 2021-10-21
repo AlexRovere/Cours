@@ -1,8 +1,7 @@
 <?php
 
-include('CharacteristicsDisplayable.php');
 
-class Tire implements CharacteristicsDisplayable
+class Tire
 {
     public float $width;
     public float $height;

@@ -1,6 +1,6 @@
 <?php
-
-class Car
+require_once 'CharacteristicsDisplayable.php';
+abstract class Car implements CharacteristicsDisplayable
 {
     public string $brand;
     public float $price;
@@ -16,11 +16,19 @@ class Car
         return "C'est une " . $this->brand . ' au prix de ' . $this->price . " €uros";
     }
 
-    public function displayCharacteristics(Car $car)
+    public function getCharacteristics(): array
     {
+        return [
+            'price' => $this->price,
+            'brand' => $this->brand,
+        ];
+    }
 
-        foreach ($car as $key => $value) {
-            echo '<li>' . $key . ' : ' . $value . '</li>';
-        }
+    abstract function getFinalPrice(): float;
+    abstract function getPrice(): float;
+
+    public function displayPrice()
+    {
+        return self::class;
     }
 }

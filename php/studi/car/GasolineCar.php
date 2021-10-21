@@ -1,8 +1,11 @@
 <?php
 
+
+
 class GasolineCar extends Car
 {
     public float $co2Emission;
+    private const ECO_MALUS = 50;
 
     public function __construct(float $co2Emission, string $brand, float $price)
     {
@@ -10,8 +13,20 @@ class GasolineCar extends Car
         $this->co2Emission = $co2Emission;
     }
 
-    public function description()
+    public function getCharacteristics(): array
     {
-        return parent::description() . " et d'une emission de " . $this->co2Emission;
+        $characteristics = parent::getCharacteristics();
+        $characteristics['co2Emission'] = $this->co2Emission;
+
+        return $characteristics;
+    }
+
+    public function getFinalPrice(): float
+    {
+        return $this->price + self::ECO_MALUS;
+    }
+    public function getPrice(): float
+    {
+        return $this->price;
     }
 }
