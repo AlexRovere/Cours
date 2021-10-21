@@ -1,0 +1,19 @@
+index:
+  path: /
+  controller: App\Controller\DefaultController::index
+
+post_list:
+  path: /liste-des-articles
+  controller: App\Controller\PostController::liste
+
+post_item:
+  path: /article/fonctionnement-des-applications-symfony
+  controller: App\Controller\PostController::item
+
+users:
+  path: /utilisateurs
+  controller: App\Controller\UserController::liste
+
+user-detail:
+  path: /utilisateurs/{name}
+  controller: App\Controller\UserController::detail
