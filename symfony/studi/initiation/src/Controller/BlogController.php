@@ -36,9 +36,8 @@ class BlogController extends AbstractController
 
     /**
      * @route("/posts/{user}/{year?2020}",
-     * methods= {"GET"}
-     * requirements={"year"="^SW[0-9]{4}$ "}
-     * )
+     * methods= {"GET"})
+     * requirements={"year"="^SW[0-9]{4}$"}
      */
     public function postsFromUserAndYear(string $user, int $year)
     {
