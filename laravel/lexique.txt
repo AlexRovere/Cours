@@ -1,7 +1,32 @@
-#Laravel CLI
+# Laravel CLI
 
 php artisan 
+
+# Liste des commandes artisan
+
+php artisan list
 
 # Création d'un model avec une migration
 
 php artisan make:model { Name } -m
+
+# Migrer les migrations en bdd
+
+php artisan migrate
+
+// Si problème de longeur de clé trop longue 
+-> maj mysql
+ou
+-> ajouter dans providers/appserviceproviders : Schema::defaultStringLength(191);
+
+# Création d'une factory d'un model
+
+php artisan make:factory { Model }Factory --model={ Model }
+
+# Editer du texte php dans la console
+
+php artisan tinker
+
+# Générer des instances d'un model avec sa factory
+
+{ Model }::factory()->count(10)->create();

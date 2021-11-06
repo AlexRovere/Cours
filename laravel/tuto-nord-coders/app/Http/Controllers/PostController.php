@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use PhpParser\Node\Expr\AssignOp\Concat;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = [
-            'Mon super premier titre',
-            'Mon super second titre',
-        ];
+        // Récupère tous les articles en bdd
+        $posts = Post::all()->sortBy('title')->take(10);
         $title = 'Mon super premier titre';
         $title2 = 'Mon super second titre';
         return view('articles', compact('posts'));
@@ -19,12 +19,13 @@ class PostController extends Controller
 
     public function show($id)
     {
-        $posts = [
-            1 => 'Mon titre n°1',
-            2 => 'Mon titre n°2'
-        ];
+        // $post = Post::find($id) ?? 'pas de titre';
+        // OR 
+        $post = Post::findOrFail($id);
 
-        $post = $posts[$id] ?? 'pas de titre';
+        //Récupéré un post avec une autre clé que l'id
+        // $post = Post::where('title', '=', 'Dignissimos placeat id molestiae.')->firstOrFail();
+
 
         return view('article', [
             'post' => $post,
@@ -34,6 +35,51 @@ class PostController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+
+    public function create()
+    {
+        return view('form');
+    }
+
+    public  function store(Request $request)
+    {
+        Post::create([
+            'title' => $request->title,
+            'content' => $request->content
+        ]);
+
+        // $post = new Post();
+        // $post->title = $request->title;
+        // $post->content = $request->content;
+        // $post->save();
+        // dd('Post crée !');
+    }
+
+    public function update($id)
+    {
+        $post = Post::find($id);
+        return view('update', [
+            'post' => $post
+        ]);
+    }
+
+    public function storeUpdate(Request $request)
+    {
+        $post = Post::find($request->id);
+        $post->update([
+            'title' => $request->title,
+            'content' => $request->content
+        ]);
+        $post->save();
+        dd('post bien modifié !');
+    }
+
+    public function delete($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+        return dd('le poste a bien été supprimé');
     }
 }
 
