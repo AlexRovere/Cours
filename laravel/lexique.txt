@@ -1,0 +1,7 @@
+#Laravel CLI
+
+php artisan 
+
+# Création d'un model avec une migration
+
+php artisan make:model { Name } -m
