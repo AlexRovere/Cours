@@ -49,6 +49,8 @@ class PostController extends Controller
             'content' => $request->content
         ]);
 
+        return redirect()->route('welcome')->with('status', 'Article crée !');
+
         // $post = new Post();
         // $post->title = $request->title;
         // $post->content = $request->content;
@@ -58,7 +60,7 @@ class PostController extends Controller
 
     public function update($id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
         return view('update', [
             'post' => $post
         ]);
@@ -66,20 +68,20 @@ class PostController extends Controller
 
     public function storeUpdate(Request $request)
     {
-        $post = Post::find($request->id);
+        $post = Post::findOrFail($request->id);
         $post->update([
             'title' => $request->title,
             'content' => $request->content
         ]);
         $post->save();
-        dd('post bien modifié !');
+        return redirect()->route('welcome')->with('status', 'Article numéro ' . $request->id . ' a bien été modifié !');
     }
 
     public function delete($id)
     {
-        $post = Post::find($id);
+        $post = Post::findOrFail($id);
         $post->delete();
-        return dd('le poste a bien été supprimé');
+        return redirect()->route('welcome')->with('status', 'Article numéro ' . $id . ' a bien été supprimé !');;
     }
 }
 

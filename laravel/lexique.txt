@@ -30,3 +30,14 @@ php artisan tinker
 # Générer des instances d'un model avec sa factory
 
 { Model }::factory()->count(10)->create();
+
+# Debug dump & die
+
+dd()
+
+# Créer une migration pivot pour une relation many to many
+
+php artisan make:migration create_pivot_table_{ ModelName1}_{ ModelName2 } 
+
+// Le premier de l'odre alphabétique
+

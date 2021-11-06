@@ -2,6 +2,12 @@
 
 @section('content')
 
+@if (session('status'))
+<div class="bg-green-500">
+    {{ session('status') }}
+</div>
+@endif
+
 @if ($posts->count() > 0)
 @foreach($posts as $post)
 <p>Article {{ $post->id }}</p>
