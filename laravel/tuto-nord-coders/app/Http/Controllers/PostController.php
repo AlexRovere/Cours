@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\Video;
 use App\Models\Comment;
+use App\Rules\Uppercase;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\AssignOp\Concat;
 
@@ -47,6 +48,18 @@ class PostController extends Controller
 
     public  function store(Request $request)
     {
+
+        $request->validate([
+            'title' => 'required|min:5|max:255|unique:posts',
+            'content' => ['required', 'max:255', new Uppercase()]
+        ]);
+
+
+        //Enregistrement de l'image dans le dossier storage/app/avatars
+        if ($request->avatar != null) {
+            $request->avatar->store('avatars');
+        }
+
         Post::create([
             'title' => $request->title,
             'content' => $request->content
