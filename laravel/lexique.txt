@@ -8,6 +8,10 @@ php artisan list
 
 # Création d'un model avec une migration
 
+# Création d'un projet
+
+composer create-project laravel/laravel {name}
+
 php artisan make:model { Name } -m
 
 # Migrer les migrations en bdd
