@@ -20,23 +20,43 @@ class Post extends Model
     //     return $this->hasMany(Comment::class);
     // }
 
+    // Relation one to one
+
     public function image()
     {
         return $this->hasOne(Image::class);
     }
+
+    // Relation has one trough (post -> image -> artist)
 
     public function imageArtist()
     {
         return $this->hasOneThrough(Artist::class, Image::class);
     }
 
+    // Many to Many
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);
     }
 
+    // One to many polymorphic (les commentaires peuvent etre d'un post ou d'une vidéo)
+
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
+    // Has one of Many
+
+    // public function latestComment()
+    // {
+    //     return $this->hasOne(Comment::class)->latestOfMany();
+    // }
+
+    // public function oldestComment()
+    // {
+    //     return $this->hasOne(Comment::class)->oldestOfMany();
+    // }
 }

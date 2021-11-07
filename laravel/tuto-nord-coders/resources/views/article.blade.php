@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Détail de l'article</h1>
+<h1 class="text-center text-2xl font-bold">Détail de l'article</h1>
 
 <div>
     @forelse($post->tags as $tag)
@@ -12,8 +12,12 @@
     @endforelse
 </div>
 
-<span>{{ $post->image ? $post->image->path : 'Aucune image associé'}}</span>
-<span>Nom de l'artiste de l'image : {{ $post->imageArtist->name }}</span>
+<div>
+    <span>url image : {{ $post->image ? $post->image->path : 'Aucune image associé'}}</span>
+</div>
+<div>
+    <span>nom de l'artiste : {{ $post->imageArtist->name ?? 'Aucune artiste associé' }}</span>
+</div>
 
 <p>Article {{ $post->id }}</p>
 
@@ -25,6 +29,8 @@
 
 <hr>
 
+
+{{-- <div>Commentaire le plus récent : {{ $post->latestComment->content ?? 'aucun commentaire'}}</div> --}}
 
 
 @forelse ($post->comments as $comment)

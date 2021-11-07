@@ -33,7 +33,7 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->whereNumber('id')->n
 
 Route::get('/contact', [PostController::class, 'contact'])->name('contact');
 
-Route::get('create-polymorphic-registration', [PostController::class, 'register']);
+Route::get('/register', [PostController::class, 'register']);
 
 // Route::get('posts', function () {
 //     return Response()->json([
