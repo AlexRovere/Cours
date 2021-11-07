@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Video;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use PhpParser\Node\Expr\AssignOp\Concat;
 
@@ -12,9 +14,10 @@ class PostController extends Controller
     {
         // Récupère tous les articles en bdd
         $posts = Post::all()->sortBy('title')->take(10);
+        $video = Video::find(1);
         $title = 'Mon super premier titre';
         $title2 = 'Mon super second titre';
-        return view('articles', compact('posts'));
+        return view('articles', compact('posts', 'video'));
     }
 
     public function show($id)
@@ -82,6 +85,24 @@ class PostController extends Controller
         $post = Post::findOrFail($id);
         $post->delete();
         return redirect()->route('welcome')->with('status', 'Article numéro ' . $id . ' a bien été supprimé !');;
+    }
+
+    public function register()
+    {
+        $post = Post::find(3);
+        $video = Video::find(1);
+        $comment1 = new Comment([
+            'content' => 'Mon premier commentaire'
+        ]);
+        $comment2 = new Comment([
+            'content' => 'Mon deuxième commentaire'
+        ]);
+        $comment3 = new Comment([
+            'content' => 'Mon troisième commentaire'
+        ]);
+
+        $video->comments()->save($comment3);
+        $post->comments()->saveMany([$comment1, $comment2]);
     }
 }
 

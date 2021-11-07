@@ -23,4 +23,16 @@
 <span>Aucun article en base de données</span>
 @endif
 
+<h1>Liste des commentaire de la vidéo id 1</h1>
+
+@forelse($video->comments as $comment)
+<p>Article {{ $comment->id }}</p>
+<div class="my-5 border-2">
+    <p>{{ $comment['content'] }}</p>
+    <span>Crée le : {{ $comment['created_at'] }}</span>
+</div>
+@empty
+<span>Aucun commentaire</span>
+@endforelse
+
 @endsection

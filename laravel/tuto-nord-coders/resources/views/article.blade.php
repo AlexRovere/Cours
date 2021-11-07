@@ -13,6 +13,7 @@
 </div>
 
 <span>{{ $post->image ? $post->image->path : 'Aucune image associé'}}</span>
+<span>Nom de l'artiste de l'image : {{ $post->imageArtist->name }}</span>
 
 <p>Article {{ $post->id }}</p>
 
@@ -23,6 +24,8 @@
 </div>
 
 <hr>
+
+
 
 @forelse ($post->comments as $comment)
 <div>{{ $comment->content }} | <span>Crée le : {{ $comment->created_at->format('d / m / Y') }}</span></div>
