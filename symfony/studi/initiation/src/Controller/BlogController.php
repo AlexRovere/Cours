@@ -2,9 +2,10 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Product;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 /**
  * @route("/blog")
@@ -17,7 +18,10 @@ class BlogController extends AbstractController
      */
     public function index()
     {
-        return $this->render('blog/index.html.twig');
+        $product = $this->getDoctrine()->getRepository(Product::class)->findAll();
+        return $this->render('blog/index.html.twig', [
+            'products' => $product
+        ]);
     }
     /**
      * @route("/posts")

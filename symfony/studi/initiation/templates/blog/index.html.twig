@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-	</head>
-	<body>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
 
-		<a href="{{ path('app_blog_postsfromuserandyear', {'year': 2015, 'user':'john'}) }}">Visiter le post de john en 2015</a>
+    <a href="{{ path('app_blog_postsfromuserandyear', {'year': 2015, 'user':'john'}) }}">Visiter le post de john en 2015</a>
 
-	</body>
+    {% for product in products %}
+      <h1>{{ product.name }}</h1>
+      {% for field in product.field %}
+        <p>{{ field.content }}</p>
+        <p>{{ field.description }}</p>
+      {% endfor %}
+    {% endfor %}
+  </body>
 </html>
