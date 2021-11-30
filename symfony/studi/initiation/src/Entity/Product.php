@@ -25,19 +25,18 @@ class Product
     private $name;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Field::class, inversedBy="products")
+     * @ORM\Column(type="string", length=255)
      */
-    private $field;
+    private $price;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Language::class, mappedBy="relation")
+     * @ORM\OneToMany(targetEntity=Traduction::class, mappedBy="productId")
      */
-    private $languages;
+    private $traductions;
 
     public function __construct()
     {
-        $this->field = new ArrayCollection();
-        $this->languages = new ArrayCollection();
+        $this->traductions = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -57,52 +56,43 @@ class Product
         return $this;
     }
 
-    /**
-     * @return Collection|Field[]
-     */
-    public function getField(): Collection
+    public function getPrice(): ?string
     {
-        return $this->field;
+        return $this->price;
     }
 
-    public function addField(Field $field): self
+    public function setPrice(string $price): self
     {
-        if (!$this->field->contains($field)) {
-            $this->field[] = $field;
-        }
-
-        return $this;
-    }
-
-    public function removeField(Field $field): self
-    {
-        $this->field->removeElement($field);
+        $this->price = $price;
 
         return $this;
     }
 
     /**
-     * @return Collection|Language[]
+     * @return Collection|Traduction[]
      */
-    public function getLanguages(): Collection
+    public function getTraductions(): Collection
     {
-        return $this->languages;
+        return $this->traductions;
     }
 
-    public function addLanguage(Language $language): self
+    public function addTraduction(Traduction $traduction): self
     {
-        if (!$this->languages->contains($language)) {
-            $this->languages[] = $language;
-            $language->addRelation($this);
+        if (!$this->traductions->contains($traduction)) {
+            $this->traductions[] = $traduction;
+            $traduction->setProductId($this);
         }
 
         return $this;
     }
 
-    public function removeLanguage(Language $language): self
+    public function removeTraduction(Traduction $traduction): self
     {
-        if ($this->languages->removeElement($language)) {
-            $language->removeRelation($this);
+        if ($this->traductions->removeElement($traduction)) {
+            // set the owning side to null (unless already changed)
+            if ($traduction->getProductId() === $this) {
+                $traduction->setProductId(null);
+            }
         }
 
         return $this;
